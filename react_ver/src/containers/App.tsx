@@ -1,9 +1,11 @@
 import React from "react";
-
+import { FootNav, HeaderNav, Main } from "../components";
 const App: React.FC = () => {
     return (
         <div className="App">
-            <header className="App-header">pa</header>
+            <HeaderNav />
+            <Main />
+            <FootNav />
         </div>
     );
 };

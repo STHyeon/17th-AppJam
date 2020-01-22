@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "./Main.scss";
+@import "./Nav.scss";
+@import "./Auth.scss";
+@import "./Clock.scss";
+@import "./Calendar.scss";
+
+.inner {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+}
