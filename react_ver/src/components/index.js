@@ -4,5 +4,6 @@ import Main from "./Main";
 import Auth from "./Auth";
 import Clock from "./Clock";
 import Calendar from "./Calendar";
+import Form from "./Form";
 
-export { FootNav, HeaderNav, Main, Auth, Clock, Calendar };
+export { FootNav, HeaderNav, Main, Auth, Clock, Calendar, Form };

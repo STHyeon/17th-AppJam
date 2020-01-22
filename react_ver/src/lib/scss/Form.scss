@@ -1,0 +1,58 @@
+.form {
+    height: 100vh;
+    background: #e6e6e6;
+
+    .formBox {
+        position: relative;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 540px;
+
+        input {
+            border: none;
+        }
+
+        textarea {
+            margin: 5px 0;
+            border: none;
+        }
+
+        .imgInput {
+            display: block;
+            width: 100%;
+            background: #ffffff;
+
+            img {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                width: 50px;
+                padding: 5px 0;
+            }
+        }
+        //     overflow: auto;
+        // white-space: nowrap;
+
+        .img_box {
+            overflow: auto;
+            white-space: nowrap;
+
+            .preview {
+                width: 50px;
+                margin: 5px 5px 0 0;
+                &:last-child {
+                    margin-right: none;
+                }
+            }
+        }
+
+        .submit {
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            border-radius: 50px;
+            background: #ffcf00;
+        }
+    }
+}

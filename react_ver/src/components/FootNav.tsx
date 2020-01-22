@@ -17,7 +17,7 @@ function FootNav(): ReactElement {
                         </Link>
                     </li>
                     <li className="left">
-                        <Link to="">
+                        <Link to="/write">
                             <img src={PEN} alt="" />
                         </Link>
                     </li>
