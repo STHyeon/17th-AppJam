@@ -1,0 +1,69 @@
+.clock {
+    h1 {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 2px solid #d6d6d6;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .clock_wrap {
+        position: relative;
+
+        .clockBox {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translate(-50%);
+
+            .time {
+                font-size: 50px;
+                color: #646464;
+                text-align: center;
+            }
+
+            button {
+                width: 130px;
+                margin-top: 20px;
+                margin-right: 20px;
+                padding: 5px 20px;
+                border-radius: 50px;
+                border: 1px solid #e4e4e4;
+                color: #828282;
+                box-shadow: 2px 2px 8px #bcbcbc;
+                transition: background 1s;
+                &:hover {
+                    color: #ffffff;
+                    background: #ffcf00;
+                }
+            }
+
+            ul {
+                overflow: scroll;
+                max-height: 569px;
+                margin-top: 50px;
+                text-align: center;
+
+                li {
+                    padding: 10px 0;
+                    border-bottom: 1px solid #d3d3d3;
+                    text-align: left;
+                    &:last-child {
+                        border: none;
+                    }
+
+                    span {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+
+        background: gray;
+    }
+}
