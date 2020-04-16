@@ -1,0 +1,33 @@
+.footNav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: gray;
+
+    .footNav_list {
+        li {
+            margin: 5px 6.9%;
+        }
+        padding: 0 16px;
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .center {
+            position: absolute;
+            left: 50%;
+            bottom: 18px;
+            margin: 0;
+            padding: 10px;
+            border-radius: 50%;
+            background: #ffcf00;
+            transform: translateX(-50%);
+        }
+    }
+}

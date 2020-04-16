@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@import "./to_reset.css";
+
+@import "./atoms/CustomCard.scss";
+@import "./atoms/CustomInput.scss";
+@import "./atoms/CustomText.scss";
+@import "./atoms/CustomButton.scss";
+@import "./atoms/CustomImg.scss";
+
+@import "./organisms/Nav.scss";
+@import "./organisms//FormBox.scss";
+@import "./organisms/Notify.scss";
+
+@import "./templates/Calendar.scss";
+@import "./templates/StopWatch.scss";
+@import "./templates/Auth.scss";
+@import "./templates/Write.scss";
+
+h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.inner {
+    position: relative;
+    max-width: 720px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+    height: 0;
+    visibility: hidden;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.loadingAni {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

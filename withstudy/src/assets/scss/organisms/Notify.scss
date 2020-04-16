@@ -1,0 +1,33 @@
+.Notify {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 350px;
+    border: 2px solid #cd4945;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #f77975;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
+    z-index: 9999;
+
+    .DefaultImg {
+        display: inline-block;
+        width: 40px;
+        padding: 5px;
+        border-right: 2px solid #cd4945;
+        vertical-align: middle;
+    }
+
+    .DefaultText {
+        display: inline-block;
+        padding: 14px 0 0 14px;
+        color: #fff;
+        vertical-align: sub;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Notify {
+        // width: 41.7%;
+    }
+}
