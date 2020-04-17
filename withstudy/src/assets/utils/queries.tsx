@@ -30,6 +30,7 @@ export const READ_USER = gql`
     query readUser($input: UserInput) {
         getUser(input: $input) {
             _id
+            token
             username
             password
         }

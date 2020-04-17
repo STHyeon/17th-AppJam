@@ -19,6 +19,7 @@ ReactDOM.render(
                 <Route path="/" exact component={ListPage} />
                 <Route path="/write" component={WritePage} />
                 <Route path="/login" component={AuthPage} />
+                <Route path="/logout" component={ListPage} />
                 <Route path="/register" component={AuthPage} />
                 <Route path="/calendar" component={CalendarPage} />
                 <Route path="/stopwatch" component={StopWatchPage} />

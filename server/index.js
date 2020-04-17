@@ -15,7 +15,7 @@ app.use(
     "/graphql",
     graphqlHTTP({
         schema: schema,
-        graphiql: true
+        graphiql: true,
     })
 );
 
@@ -31,4 +31,4 @@ mongoose.Promise = global.Promise;
 mongoose
     .connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then()
-    .catch(e => console.log(e));
+    .catch((e) => console.log(e));

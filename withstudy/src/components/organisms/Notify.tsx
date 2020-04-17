@@ -11,7 +11,7 @@ function Notify(props: Props) {
     return (
         <div className="Notify clearfix">
             <DefaultImg>{ICON_ME}</DefaultImg>
-            <SubText>{children}</SubText>
+            <SubText classNames="error_message">{children}</SubText>
         </div>
     );
 }

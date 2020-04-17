@@ -22,6 +22,8 @@ function Auth() {
             setMode(false);
         } else if (nowUrl === "/login") {
             setMode(true);
+        } else if (nowUrl === "/logout") {
+            localStorage.removeItem("token");
         }
     }, [nowUrl]);
 
@@ -47,10 +49,15 @@ function Auth() {
             password: password,
         };
         getUser({ variables: { input: write_object } });
-        console.log(loginData);
     }
 
     if (loginData) {
+        const loginMap = loginData.getUser;
+        let loginToken = "";
+        loginMap.forEach((element: any) => {
+            loginToken = element.token;
+        });
+        localStorage.setItem("token", loginToken);
         history.push("/");
     }
     if (c_u_loading) return <LoadingDiv />;
@@ -71,7 +78,9 @@ function Auth() {
                     <HeadTitle>로그인</HeadTitle>
                     <Input onGetValue={setID}>아이디</Input>
                     <Input onGetValue={setPassword}>비밀번호</Input>
-                    <CustomButton onButtonFunc={onLoginObject}>로그인</CustomButton>
+                    <CustomButton onButtonFunc={onLoginObject} classNames="AuthBtn">
+                        로그인
+                    </CustomButton>
                     <Link to="/register">
                         <Text>아직회원이 아니신가요?</Text>
                     </Link>
@@ -82,7 +91,7 @@ function Auth() {
                     <Input onGetValue={setID}>아이디</Input>
                     <Input onGetValue={setPassword}>비밀번호</Input>
                     <Input onGetValue={setPasswordCheck}>비밀번호 확인</Input>
-                    <CustomButton onButtonFunc={onCREATEObject} classNames="stopwatchMap">
+                    <CustomButton onButtonFunc={onCREATEObject} classNames="AuthBtn">
                         회원가입
                     </CustomButton>
                 </div>

@@ -23,7 +23,7 @@ function StopWatch() {
                 <CustomButton disabled={elapsed === "0.0"} onButtonFunc={handleReset} classNames="stopwatchbtn">
                     {isRunning ? "+Lap" : "Reset"}
                 </CustomButton>
-                <CustomMap mapProps={laps} classNames="stopwatchMap" />
+                <CustomMap mapProps={laps} classNames="stopwatchMap" units="s" />
             </div>
         </div>
     );

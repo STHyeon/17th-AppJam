@@ -1,5 +1,6 @@
 import User from "../models/user";
 import Question from "../models/question";
+import { jwtUser, unJwtUser } from "../utils/jwt";
 
 export const resolvers = {
     Query: {
@@ -22,7 +23,7 @@ export const resolvers = {
         },
         allQuestion: async (_, args) => {
             return await Question.find();
-        }
+        },
     },
     Mutation: {
         createUser: async (_, args) => {
@@ -36,7 +37,8 @@ export const resolvers = {
                 throw Error("계정이 이미 존재합니다.");
             }
 
-            const success = await User.create({ username, password });
+            const token = jwtUser(username);
+            const success = await User.create({ token, username, password });
             return success;
         },
 
@@ -88,6 +90,6 @@ export const resolvers = {
             const result = await Question.create({ title, contents });
 
             return result;
-        }
-    }
+        },
+    },
 };

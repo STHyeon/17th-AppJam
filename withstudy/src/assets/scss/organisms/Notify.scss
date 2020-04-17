@@ -2,7 +2,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    width: 350px;
+    width: 50%;
     border: 2px solid #cd4945;
     border-radius: 5px;
     font-size: 14px;
@@ -14,13 +14,13 @@
         display: inline-block;
         width: 40px;
         padding: 5px;
-        border-right: 2px solid #cd4945;
         vertical-align: middle;
     }
 
-    .DefaultText {
+    .error_message {
         display: inline-block;
-        padding: 14px 0 0 14px;
+        padding: 14px 11px;
+        border-left: 2px solid #cd4945;
         color: #fff;
         vertical-align: sub;
     }

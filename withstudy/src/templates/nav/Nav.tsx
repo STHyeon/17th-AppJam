@@ -6,8 +6,15 @@ import MY from "../../assets/img/icon/ICON_ME.png";
 import ClOCK from "../../assets/img/icon/ICON_STOPWATCH.png";
 import PEN from "../../assets/img/icon/document.png";
 import CALENDAR from "../../assets/img/icon/ICON_CALENDAR.png";
+import ONMY from "../../assets/img/icon/ICON_ME_ON.png";
 
-function Nav() {
+interface Props {
+    checkLogin?: boolean;
+}
+
+function Nav(props: Props) {
+    const { checkLogin } = props;
+
     return (
         <nav className="footNav">
             <div className="inner">
@@ -33,9 +40,15 @@ function Nav() {
                         </Link>
                     </li>
                     <li className="right">
-                        <Link to="/login">
-                            <img src={MY} alt="" />
-                        </Link>
+                        {checkLogin ? (
+                            <Link to="/logout">
+                                <img src={ONMY} alt="" />
+                            </Link>
+                        ) : (
+                            <Link to="/login">
+                                <img src={MY} alt="" />
+                            </Link>
+                        )}
                     </li>
                 </ul>
             </div>

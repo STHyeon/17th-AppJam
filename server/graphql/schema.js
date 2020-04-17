@@ -4,6 +4,7 @@ import { resolvers } from "./resolvers.js";
 const typeDefs = `
     type User {
         _id: ID!
+        token: String
         username: String
         password: String
     }
@@ -41,7 +42,7 @@ const typeDefs = `
 
 const schema = makeExecutableSchema({
     typeDefs,
-    resolvers
+    resolvers,
 });
 
 export default schema;
