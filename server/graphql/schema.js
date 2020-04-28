@@ -17,18 +17,35 @@ const typeDefs = `
     type Question {
         _id: ID!
         title: String!
-        contents: String!
+        desc: String!
+        createdAt: String 
     }
 
     input QuestionInput {
         title: String
-        contents: String
+        desc: String
+    }
+
+    type Calendar {
+        _id: ID!
+        title: String!
+        desc: String!
+        start: String
+        end: String
+    }
+
+    input CalendarInput {
+        title: String
+        desc: String
+        start: String
+        end: String
     }
 
     type Query {
         allUser: [User]
         getUser(input: UserInput): [User]
         allQuestion: [Question]
+        allCalendar: [Calendar]
     }
 
     type Mutation {
@@ -36,6 +53,7 @@ const typeDefs = `
         updateUser(_id: ID!, input: UserInput): Boolean
         deleteUser(_id: ID!): Boolean!
         createQuestion(input: QuestionInput): Question
+        createCalendar(input: CalendarInput): Calendar
     }
 
 `;

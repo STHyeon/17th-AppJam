@@ -1,5 +1,6 @@
 import User from "../models/user";
 import Question from "../models/question";
+import Calendar from "../models/calendar";
 import { jwtUser, unJwtUser } from "../utils/jwt";
 
 export const resolvers = {
@@ -22,7 +23,12 @@ export const resolvers = {
             return result;
         },
         allQuestion: async (_, args) => {
-            return await Question.find();
+            const result = await Question.find();
+            return result;
+        },
+        allCalendar: async (_, args) => {
+            const result = await Calendar.find();
+            return result;
         },
     },
     Mutation: {
@@ -82,12 +88,26 @@ export const resolvers = {
             return true;
         },
         createQuestion: async (_, args) => {
-            const { title, contents } = args.input;
-            if (title.length <= 0 || contents.length <= 0) {
+            const { title, desc } = args.input;
+
+            if (title.length <= 0 || desc.length <= 0) {
                 throw new Error("빈칸을 채워주세요.");
             }
 
-            const result = await Question.create({ title, contents });
+            const createdAt = new Date().toString();
+            const result = await Question.create({ title, desc, createdAt });
+
+            return result;
+        },
+        createCalendar: async (_, args) => {
+            const { title, desc, start, end } = args.input;
+            if (title.length <= 0 || desc.length <= 0) {
+                throw new Error("빈칸을 채워주세요.");
+            }
+            // const start = new Date().toString();
+            // const end = new Date().toString();
+
+            const result = await Calendar.create({ title, desc, start, end });
 
             return result;
         },

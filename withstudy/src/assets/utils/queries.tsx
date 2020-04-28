@@ -5,7 +5,8 @@ export const LISTQUERY = gql`
         allQuestion {
             _id
             title
-            contents
+            desc
+            createdAt
         }
     }
 `;
@@ -33,6 +34,29 @@ export const READ_USER = gql`
             token
             username
             password
+        }
+    }
+`;
+
+export const CREATE_CALENDAR = gql`
+    mutation createCalendar($input: CalendarInput) {
+        createCalendar(input: $input) {
+            _id
+            title
+            start
+            end
+            desc
+        }
+    }
+`;
+
+export const READ_CALENDAR = gql`
+    query allCalendar {
+        allCalendar {
+            title
+            start
+            end
+            desc
         }
     }
 `;

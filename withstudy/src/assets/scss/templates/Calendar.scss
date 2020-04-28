@@ -1,6 +1,43 @@
 .calendar_box {
     max-width: 540px;
-    margin: 100px auto 0;
+    margin: 0 auto;
+    padding: 100px 0 0;
+
+    .calendar_tool {
+        width: auto;
+        margin: 0 10px;
+        background: none;
+
+        &:first-child {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    .inner {
+        padding: 16px;
+        background: #ffffff;
+    }
+
+    .rbc-date-cell {
+        text-align: center;
+    }
+
+    .rbc-month-row {
+        justify-content: center;
+    }
+
+    .rbc-header,
+    .rbc-header + .rbc-header,
+    .rbc-day-bg + .rbc-day-bg,
+    .rbc-month-view,
+    .rbc-month-row + .rbc-month-row {
+        border: 0;
+    }
+
+    .rbc-month-view {
+        padding-top: 10px;
+        border-top: 1px solid #e3e3e3;
+    }
 
     .react-calendar {
         width: 100%;
@@ -39,8 +76,12 @@
                 cursor: pointer;
             }
 
-            .react-calendar__month-view__days__day--weekend { color: #d10000;}
-            .react-calendar__month-view__days__day--neighboringMonth { color: #757575;}
+            .react-calendar__month-view__days__day--weekend {
+                color: #d10000;
+            }
+            .react-calendar__month-view__days__day--neighboringMonth {
+                color: #757575;
+            }
             .react-calendar__tile--active {
                 background: #ffcf00;
 
@@ -53,9 +94,9 @@
     }
 
     ul {
-        padding: 10px 25px;
+        padding: 10px 0;
         border-top: 1px solid #bcbcbc;
-        background: #e9e9e9;
+        background: #ffffff;
         li {
             position: relative;
             padding: 0 0 0 45px;

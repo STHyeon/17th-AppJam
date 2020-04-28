@@ -11,7 +11,8 @@ import Text from "./CustomText/CustomText";
 import SubText from "./CustomText/CustomText";
 import DefaultImg from "./CustomImg/CustomImg";
 import CustomMap from "./CustomMap/CustomMap";
+import CustomLink from "./CustomLink/CustomLink";
 
 export { CardAvatar, CardBody, CardHeader, CardTitle };
 
-export { Input, TextArea, HeadTitle, CustomButton, Text, SubText, DefaultImg, CustomMap };
+export { Input, TextArea, HeadTitle, CustomButton, Text, SubText, DefaultImg, CustomMap, CustomLink };
