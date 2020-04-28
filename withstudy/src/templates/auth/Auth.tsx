@@ -72,31 +72,33 @@ function Auth() {
     }
 
     return (
-        <FormBox>
-            {Mode ? (
-                <div className="Auth">
-                    <HeadTitle>로그인</HeadTitle>
-                    <Input onGetValue={setID}>아이디</Input>
-                    <Input onGetValue={setPassword}>비밀번호</Input>
-                    <CustomButton onButtonFunc={onLoginObject} classNames="AuthBtn">
-                        로그인
-                    </CustomButton>
-                    <Link to="/register">
-                        <Text>아직회원이 아니신가요?</Text>
-                    </Link>
-                </div>
-            ) : (
-                <div className="Auth">
-                    <HeadTitle>회원가입</HeadTitle>
-                    <Input onGetValue={setID}>아이디</Input>
-                    <Input onGetValue={setPassword}>비밀번호</Input>
-                    <Input onGetValue={setPasswordCheck}>비밀번호 확인</Input>
-                    <CustomButton onButtonFunc={onCREATEObject} classNames="AuthBtn">
-                        회원가입
-                    </CustomButton>
-                </div>
-            )}
-        </FormBox>
+        <div className="auth_wrap">
+            <FormBox>
+                {Mode ? (
+                    <div className="Auth">
+                        <HeadTitle>로그인</HeadTitle>
+                        <Input onGetValue={setID}>아이디</Input>
+                        <Input onGetValue={setPassword}>비밀번호</Input>
+                        <CustomButton onButtonFunc={onLoginObject} classNames="AuthBtn">
+                            로그인
+                        </CustomButton>
+                        <Link to="/register">
+                            <Text>아직회원이 아니신가요?</Text>
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="Auth">
+                        <HeadTitle>회원가입</HeadTitle>
+                        <Input onGetValue={setID}>아이디</Input>
+                        <Input onGetValue={setPassword}>비밀번호</Input>
+                        <Input onGetValue={setPasswordCheck}>비밀번호 확인</Input>
+                        <CustomButton onButtonFunc={onCREATEObject} classNames="AuthBtn">
+                            회원가입
+                        </CustomButton>
+                    </div>
+                )}
+            </FormBox>
+        </div>
     );
 }
 

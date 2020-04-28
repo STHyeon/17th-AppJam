@@ -1,16 +1,11 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
 const QuestionSchema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    contents: {
-        type: String,
-        required: true
-    }
+    title: { type: String, required: true },
+    desc: { type: String, required: true },
+    createdAt: { type: Date },
 });
 
 export default mongoose.model("question", QuestionSchema);

@@ -6,9 +6,10 @@ import { Context } from "../../context/context";
 
 interface List {
     allList: {
-        _id: String;
-        title: String;
-        contents: String;
+        _id: string;
+        title: string;
+        contents: string;
+        createdAt: string;
     };
 }
 
@@ -18,6 +19,7 @@ function List() {
 
     if (listLoading) return <LoadingDiv />;
     if (listError) return <p>서버 에러</p>;
+    console.log(listData);
 
     return (
         <div>

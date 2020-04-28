@@ -25,7 +25,7 @@ function Nav(props: Props) {
                         </Link>
                     </li>
                     <li className="left">
-                        <Link to="/write">
+                        <Link to={`/write`}>
                             <img src={PEN} alt="" />
                         </Link>
                     </li>

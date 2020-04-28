@@ -1,7 +1,7 @@
 .Card {
     li {
         display: inline-block;
-        max-width: 32.4%;
+        max-width: 32.3%;
         width: 100%;
         margin: 10px 10px 0 0;
         padding: 10px 16px;
@@ -21,6 +21,18 @@
         .avatar {
             font-size: 12px;
             color: #ccc;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Card {
+        li {
+            max-width: 100%;
+
+            &:hover {
+                transform: scale(1.025);
+            }
         }
     }
 }

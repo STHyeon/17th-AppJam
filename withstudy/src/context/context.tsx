@@ -17,7 +17,7 @@ function CommonContext(props: any) {
         const token = localStorage.getItem("token");
         setIsLogin(token);
 
-        if (localStorage.getItem("token") == "null" || localStorage.getItem("token") == "undefined" || localStorage.getItem("token") == null) {
+        if (localStorage.getItem("token") === "null" || localStorage.getItem("token") === "undefined" || localStorage.getItem("token") == null) {
             setLoginMode(false);
         } else {
             setLoginMode(true);

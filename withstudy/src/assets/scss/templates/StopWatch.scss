@@ -1,20 +1,24 @@
-.clock {
-    h1 {
-        width: 100%;
-        margin: 0;
-        padding: 100px 0 10px;
-        border-bottom: 2px solid #d6d6d6;
-        font-size: 25px;
-        text-align: center;
-    }
+.clock_wrap {
+    padding: 100px 0 0;
+    text-align: center;
 
-    .description {
-        margin-top: 20px;
-        text-align: center;
-    }
+    .stopwatch_wrap {
+        min-height: 500px;
+        padding: 0 16px 20px;
+        background: #ffffff;
+        h1 {
+            width: 100%;
+            margin: 0;
+            padding: 30px 0 10px;
+            border-bottom: 2px solid #d6d6d6;
+            font-size: 25px;
+            text-align: center;
+        }
 
-    .clock_wrap {
-        text-align: center;
+        .description {
+            margin-top: 20px;
+            text-align: center;
+        }
 
         .time {
             font-size: 50px;

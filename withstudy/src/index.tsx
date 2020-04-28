@@ -18,6 +18,7 @@ ReactDOM.render(
             <Switch>
                 <Route path="/" exact component={ListPage} />
                 <Route path="/write" component={WritePage} />
+                <Route path="/calendarWrite" component={WritePage} />
                 <Route path="/login" component={AuthPage} />
                 <Route path="/logout" component={ListPage} />
                 <Route path="/register" component={AuthPage} />
