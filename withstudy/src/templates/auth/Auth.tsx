@@ -34,7 +34,7 @@ function Auth() {
         } else {
             const write_object: object = {
                 username: ID,
-                password: password,
+                password: password
             };
 
             createUser({ variables: { input: write_object } })
@@ -46,7 +46,7 @@ function Auth() {
     function onLoginObject(): void {
         const write_object: object = {
             username: ID,
-            password: password,
+            password: password
         };
         getUser({ variables: { input: write_object } });
     }
@@ -55,6 +55,7 @@ function Auth() {
         const loginMap = loginData.getUser;
         let loginToken = "";
         loginMap.forEach((element: any) => {
+            console.log(element);
             loginToken = element.token;
         });
         localStorage.setItem("token", loginToken);

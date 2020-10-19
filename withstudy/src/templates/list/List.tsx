@@ -4,13 +4,11 @@ import { LISTQUERY } from "../../assets/utils/queries";
 import { NewListCard } from "../../components/organisms";
 import { Context } from "../../context/context";
 
-interface List {
-    allList: {
-        _id: string;
-        title: string;
-        contents: string;
-        createdAt: string;
-    };
+interface ListProps {
+    _id?: string;
+    title?: string;
+    desc?: string;
+    createdAt?: string;
 }
 
 function List() {
@@ -18,13 +16,12 @@ function List() {
     const { loading: listLoading, data: listData, error: listError } = useQuery(LISTQUERY);
 
     if (listLoading) return <LoadingDiv />;
-    if (listError) return <p>서버 에러</p>;
-    console.log(listData);
+    if (listError) return <p>서버가 꺼져있을 확률이 큽니다.</p>;
 
     return (
         <div>
             <ul className="Card clearfix">
-                {listData.allQuestion.map((prop: any, key: any) => {
+                {listData.allQuestion.map((prop: ListProps, key: number) => {
                     return <NewListCard key={key} data={prop} />;
                 })}
             </ul>

@@ -2,8 +2,8 @@ import React from "react";
 import { CardAvatar, CardHeader, CardTitle } from "../../atoms";
 
 interface DataProps {
-    title: string;
-    avatar: string;
+    title?: string;
+    avatar?: string;
 }
 
 function ListCardHeader(props: DataProps) {

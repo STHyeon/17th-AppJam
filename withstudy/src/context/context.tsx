@@ -32,9 +32,6 @@ function CommonContext(props: any) {
         );
     };
 
-    // console.log(isLogin);
-    // console.log(loginMode);
-
     return (
         <Context.Provider value={{ history, LoadingDiv, SetCheckValue, SetErrorMessage, isLogin }}>
             <div className="inner">
